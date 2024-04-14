@@ -12,9 +12,12 @@ const config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      textShadow: {
+        glow: "0 0 8px rgba(255, 255, 255, 0.8)",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-textshadow")],
 };
 
 export default config;
