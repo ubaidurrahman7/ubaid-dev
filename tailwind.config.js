@@ -6,6 +6,17 @@ const config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: "15px",
+      },
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "960px",
+      xl: "1080px",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -14,6 +25,15 @@ const config = {
       },
       textShadow: {
         glow: "0 0 8px rgba(255, 255, 255, 0.8)",
+      },
+      colors: {
+        primary: "#131424",
+        secondary: "#393A47",
+        accent: "#F13024",
+      },
+      fontFamily: {
+        poppins: [`var(--font-poppins)`, "sans-serif"],
+        sora: [`var(--font-sora)`, "sans-serif"],
       },
     },
   },
