@@ -58,7 +58,7 @@ export default function AboutSection() {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         {/* Image Component */}
         <Image
-          className="hidden md:flex w-[500px] h-[500px] lg:w-[450px] lg:h-[450px]"
+          className="hidden md:flex w-[500px] h-[500px]"
           src="/images/aboutImage.jpg"
           alt="About Image"
           width={450}
