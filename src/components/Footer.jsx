@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Footer() {
@@ -7,8 +8,8 @@ export default function Footer() {
                 border-r-transparent text-white"
     >
       <div className="container p-12 flex justify-between">
-        <span>LOGO</span>
-        <p className="text-slate-800">All rights reserved.</p>
+        <Image src="/images/header-logo.png" width={70} height={25} />
+        <p className="text-slate-800">&copy;Ubaid, All rights reserved.</p>
       </div>
     </footer>
   );

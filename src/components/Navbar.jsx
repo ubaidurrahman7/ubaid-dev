@@ -8,6 +8,10 @@ import Image from "next/image";
 
 const navLinks = [
   {
+    title: "Home",
+    path: "/",
+  },
+  {
     title: "About",
     path: "/about",
   },
@@ -31,8 +35,7 @@ export default function Navbar() {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          <Image src="/images/header-logo.png" width={80} height={30} />
-          {/* Ubai dev */}
+          <Image src="/images/header-logo.png" width={75} height={28} />
         </Link>
         <div className="mobile-menu block md:hidden">
           <button

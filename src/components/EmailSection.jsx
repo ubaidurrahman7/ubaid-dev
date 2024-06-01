@@ -42,7 +42,7 @@ export default function EmailSection() {
         animate="show"
         exit="hidden"
       >
-        <h5 className="text-xl font-bold text-white my-12">Let`s Connect</h5>
+        <h5 className="text-xl font-bold text-white my-12">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I'm currently looking for new opportunities, my inbox is always open.
           Whether you have a question or just want to say hi, I'll try my best
@@ -50,19 +50,22 @@ export default function EmailSection() {
         </p>
         <div className="socials flex flex-grow gap-2">
           <Link
-            href={""}
+            target="_blank"
+            href="https://github.com/ubaidurrahman7"
             className="hover:text-blue-600 w-12 h-12 transition-all duration-300"
           >
             <RiGithubFill className="w-12 h-12" />
           </Link>
           <Link
-            href={""}
+            target="_blank"
+            href="https://www.linkedin.com/in/ubaid-ur-rahman-ba16811b8/"
             className="hover:text-blue-600 w-12 h-12 transition-all duration-300"
           >
             <RiLinkedinFill className="w-12 h-12" />
           </Link>
           <Link
-            href={""}
+            target="_blank"
+            href="https://x.com/me_ur7"
             className="hover:text-blue-600 w-12 h-12 transition-all duration-300"
           >
             <RiTwitterFill className="w-12 h-12" />
@@ -95,7 +98,7 @@ export default function EmailSection() {
             <div className="flex flex-col gap-1">
               <input
                 type="email"
-                placeholder="Enter Your Email"
+                placeholder="Your Email"
                 name="email"
                 className="input"
                 {...register("email", { required: true })}

@@ -79,11 +79,11 @@ export default function HeroSection() {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/heroImage1.png"
+              src="/images/HeroImage.png"
               alt="hero image"
-              width={350}
-              height={350}
-              className=" w-[220px] h-[220px] lg:w-[400px] lg:h-[365px] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+              width={200}
+              height={400}
+              className=" w-[210px] h-[235px] lg:w-[420px] lg:h-[430px] absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
             />
           </div>
         </motion.div>
