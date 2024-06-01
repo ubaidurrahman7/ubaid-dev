@@ -9,7 +9,7 @@ const projectsData = [
     title: "Flow job",
     description:
       "Flow job application created with Nextjs, tailwindcss, typscript and more. Features Nextjs server actions, pagination, Search filter, MetaData, SEO ",
-    image: "/images/projects/flowjob.png",
+    image: "/images/projects/Flowjob.png",
     tag: ["All", "Web"],
     girUrl: "/https://github.com/ubaidurrahman7/nextjs-job-board",
     previewUrl: "/https://flow-job.vercel.app/",
@@ -57,7 +57,7 @@ const projectsData = [
     title: "Netflix Clone",
     description:
       "MERN stack projects. created netflix clone with reactjs, nodejs, express, jwt auth, youtube player",
-    image: "/images/projects/netflix-clone.png",
+    image: "/images/projects/n-clone.png",
     tag: ["All", "Web"],
     girUrl: "/https://github.com/ubaidurrahman7/nextjsNetflix0.1",
     previewUrl: "/https://nextjs-netflix0-1.vercel.app/",
