@@ -8,15 +8,15 @@ import MenuOverlay from "./MenuOverlay";
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "/about",
   },
   {
     title: "Project",
-    path: "#project",
+    path: "/projects",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "/contact",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function Navbar() {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          Logo
+          UbaidDev
         </Link>
         <div className="mobile-menu block md:hidden">
           <button

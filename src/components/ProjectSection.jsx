@@ -2,6 +2,8 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 const projectsData = [
   {
@@ -85,10 +87,22 @@ export default function ProjectSection() {
   );
   return (
     <div>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-6 ">
+      <motion.h2
+        variants={fadeIn("down", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="text-center text-4xl font-bold text-white mt-4 mb-6 "
+      >
         My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6 pb-10">
+      </motion.h2>
+      <motion.div
+        variants={fadeIn("down", 0.3)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="text-white flex flex-row justify-center items-center gap-2 py-6 pb-10"
+      >
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -104,9 +118,15 @@ export default function ProjectSection() {
           name="Mobile"
           isSelected={tag === "Mobile"}
         />
-      </div>
+      </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12 ">
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="grid md:grid-cols-3 gap-8 md:gap-12 "
+      >
         {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}
@@ -117,7 +137,7 @@ export default function ProjectSection() {
             previewUrl={project.previewUrl}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

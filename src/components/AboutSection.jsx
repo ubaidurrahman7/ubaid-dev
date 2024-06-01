@@ -2,6 +2,8 @@
 import { useState } from "react";
 import TabButton from "./TabButton";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 const TAB_DATA = [
   {
@@ -57,15 +59,28 @@ export default function AboutSection() {
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         {/* Image Component */}
-        <Image
-          className="hidden md:flex w-[500px] h-[500px]"
-          src="/images/aboutImage.jpg"
-          alt="About Image"
-          width={450}
-          height={430}
-        />
+        <motion.div
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+        >
+          <Image
+            className="hidden md:flex w-[500px] h-[500px]"
+            src="/images/aboutImage.jpg"
+            alt="About Image"
+            width={450}
+            height={430}
+          />
+        </motion.div>
 
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+        <motion.div
+          variants={fadeIn("down", 0.2)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="mt-4 md:mt-0 text-left flex flex-col h-full"
+        >
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
             Hi, I am Ubaid ur Rahman, a full stack developer specializing in
@@ -78,7 +93,13 @@ export default function AboutSection() {
           </p>
 
           {/* Tab Buttons */}
-          <div className="flex flex-row mt-8">
+          <motion.div
+            variants={fadeIn("right", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex flex-row mt-8"
+          >
             {TAB_DATA.map((tab) => (
               <TabButton
                 key={tab.id}
@@ -88,13 +109,19 @@ export default function AboutSection() {
                 {tab.title}
               </TabButton>
             ))}
-          </div>
+          </motion.div>
 
           {/* Tab Content */}
-          <div className="mt-8">
+          <motion.div
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="mt-8"
+          >
             {TAB_DATA.find((tab) => tab.id === activeTab).content}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

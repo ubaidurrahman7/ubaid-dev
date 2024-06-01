@@ -6,6 +6,8 @@ import { Send } from "@/app/api/send/actions";
 import { useForm } from "react-hook-form";
 import { CheckCheck, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
 export default function EmailSection() {
   const {
@@ -33,7 +35,13 @@ export default function EmailSection() {
   return (
     <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900 to-transparent rounded-full h-40 w-40 xl:h-72 xl:w-72 z-0 blur-lg absolute top-2/3 md:top-2/3 -left-4 transform -translate-x-1/2 -translate-y-1/4"></div>
-      <div className="z-10">
+      <motion.div
+        className="z-10"
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+      >
         <h5 className="text-xl font-bold text-white my-12">Let`s Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I'm currently looking for new opportunities, my inbox is always open.
@@ -60,8 +68,13 @@ export default function EmailSection() {
             <RiTwitterFill className="w-12 h-12" />
           </Link>
         </div>
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        variants={fadeIn("left", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+      >
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex-1 flex flex-col gap-6 w-full mx-auto"
@@ -138,7 +151,7 @@ export default function EmailSection() {
             {showCheck && <CheckCheck className="text-green-500" />}
           </button>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 }
