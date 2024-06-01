@@ -11,8 +11,8 @@ const projectsData = [
       "Flow job application created with Nextjs, tailwindcss, typscript and more. Features Nextjs server actions, pagination, Search filter, MetaData, SEO ",
     image: "/images/projects/Flowjob.png",
     tag: ["All", "Web"],
-    girUrl: "/https://github.com/ubaidurrahman7/nextjs-job-board",
-    previewUrl: "/https://flow-job.vercel.app/",
+    girUrl: "https://github.com/ubaidurrahman7/nextjs-job-board",
+    previewUrl: "https://flow-job.vercel.app/",
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ const projectsData = [
     description: "Gemini Clone using Nextjs",
     image: "/images/projects/gemini.png",
     tag: ["All", "Web"],
-    girUrl: "/https://github.com/ubaidurrahman7/gemini-clone",
-    previewUrl: "/https://geminiclone1-react.netlify.app/",
+    girUrl: "https://github.com/ubaidurrahman7/gemini-clone",
+    previewUrl: "https://geminiclone1-react.netlify.app/",
   },
   {
     id: 3,
@@ -30,8 +30,8 @@ const projectsData = [
       "Portfolio web app created with Nextjs, shadcn, Framer Motion for Animation",
     image: "/images/projects/n-p.png",
     tag: ["All", "Web"],
-    girUrl: "/https://github.com/ubaidurrahman7/myNextPortfolio",
-    previewUrl: "/https://ubaid-dev.vercel.app/",
+    girUrl: "https://github.com/ubaidurrahman7/myNextPortfolio",
+    previewUrl: "https://ubaid-dev.vercel.app/",
   },
   {
     id: 4,
@@ -39,8 +39,8 @@ const projectsData = [
     description: "My Portfolio using Nextjs and tailwindcss",
     image: "/images/projects/portfolio.png",
     tag: ["All, Web"],
-    girUrl: "/https://github.com/ubaidurrahman7/ubaid-dev",
-    previewUrl: "/https://ubaiddev.vercel.app/",
+    girUrl: "https://github.com/ubaidurrahman7/ubaid-dev",
+    previewUrl: "https://ubaiddev.vercel.app/",
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const projectsData = [
       "Admin Dashboard web app created with nextjs, nodejs, auth, charts",
     image: "/images/projects/n-dashboard.png",
     tag: ["All", "Web"],
-    girUrl: "/https://github.com/ubaidurrahman7/nextdashboard",
+    girUrl: "https://github.com/ubaidurrahman7/nextdashboard",
     previewUrl: "",
   },
   {
@@ -59,8 +59,8 @@ const projectsData = [
       "MERN stack projects. created netflix clone with reactjs, nodejs, express, jwt auth, youtube player",
     image: "/images/projects/n-clone.png",
     tag: ["All", "Web"],
-    girUrl: "/https://github.com/ubaidurrahman7/nextjsNetflix0.1",
-    previewUrl: "/https://nextjs-netflix0-1.vercel.app/",
+    girUrl: "https://github.com/ubaidurrahman7/nextjsNetflix0.1",
+    previewUrl: "https://nextjs-netflix0-1.vercel.app/",
   },
   {
     id: 7,

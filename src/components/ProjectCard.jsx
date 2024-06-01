@@ -21,6 +21,8 @@ export default function ProjectCard({
           {gitUrl ? (
             <Link
               href={gitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative group h-10 w-10 mr-2 border-2 rounded-full group/link border-[#ADB7BE] hover:border-white hover:text-white flex items-center justify-center"
             >
               <CodeBracketIcon className="h-6 w-6 text-[#ADB7BE] group-hover/link:text-white" />
@@ -39,6 +41,8 @@ export default function ProjectCard({
           {previewUrl ? (
             <Link
               href={previewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="h-10 w-10 border-2 relative rounded-full border-[#ADB7BE] hover:border-white hover:text-white group/link"
             >
               <EyeIcon className="h-6 w-6 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
