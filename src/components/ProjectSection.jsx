@@ -8,9 +8,9 @@ import { fadeIn } from "../../variants";
 const projectsData = [
   {
     id: 1,
-    title: "Flow job",
+    title: "Flow Job",
     description:
-      "Flow job application created with Nextjs, tailwindcss, typscript and more. Features Nextjs server actions, pagination, Search filter, MetaData, SEO ",
+      "A robust job application platform built with Next.js, Tailwind CSS, and TypeScript. Key features include server-side actions, pagination, search filters, metadata, and SEO optimization.",
     image: "/images/projects/Flowjob.png",
     tag: ["All", "Web"],
     girUrl: "https://github.com/ubaidurrahman7/nextjs-job-board",
@@ -19,7 +19,8 @@ const projectsData = [
   {
     id: 2,
     title: "Gemini Clone",
-    description: "Gemini Clone using Nextjs",
+    description:
+      "A full-featured clone of the Gemini platform developed using Next.js, showcasing modern web development practices.",
     image: "/images/projects/gemini.png",
     tag: ["All", "Web"],
     girUrl: "https://github.com/ubaidurrahman7/gemini-clone",
@@ -29,7 +30,7 @@ const projectsData = [
     id: 3,
     title: "Portfolio",
     description:
-      "Portfolio web app created with Nextjs, shadcn, Framer Motion for Animation",
+      "A personal portfolio web application crafted with Next.js, Shadcn, and Framer Motion for seamless animations.",
     image: "/images/projects/n-p.png",
     tag: ["All", "Web"],
     girUrl: "https://github.com/ubaidurrahman7/myNextPortfolio",
@@ -38,17 +39,18 @@ const projectsData = [
   {
     id: 4,
     title: "Portfolio",
-    description: "My Portfolio using Nextjs and tailwindcss",
+    description:
+      "A professional portfolio website built with Next.js and Tailwind CSS, highlighting key projects and skills.",
     image: "/images/projects/portfolio.png",
-    tag: ["All, Web"],
+    tag: ["All", "Web"],
     girUrl: "https://github.com/ubaidurrahman7/ubaid-dev",
     previewUrl: "https://ubaiddev.vercel.app/",
   },
   {
     id: 5,
-    title: "FULL stack Admin Dashboard",
+    title: "Admin Dashboard",
     description:
-      "Admin Dashboard web app created with nextjs, nodejs, auth, charts",
+      "A comprehensive admin dashboard application developed using Next.js and Node.js, featuring authentication and dynamic charts.",
     image: "/images/projects/n-dashboard.png",
     tag: ["All", "Web"],
     girUrl: "https://github.com/ubaidurrahman7/nextdashboard",
@@ -58,7 +60,7 @@ const projectsData = [
     id: 6,
     title: "Netflix Clone",
     description:
-      "MERN stack projects. created netflix clone with reactjs, nodejs, express, jwt auth, youtube player",
+      "A Netflix clone built with the MERN stack (MongoDB, Express.js, React.js, Node.js), including JWT authentication and YouTube integration.",
     image: "/images/projects/n-clone.png",
     tag: ["All", "Web"],
     girUrl: "https://github.com/ubaidurrahman7/nextjsNetflix0.1",
@@ -67,11 +69,22 @@ const projectsData = [
   {
     id: 7,
     title: "Next.js Blog Web App",
-    description: "Blog web app created with nextjs, supabase,",
+    description:
+      "A blog web application developed with Next.js and Supabase, offering a seamless content management experience.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
-    girUrl: "/https://github.com/ubaidurrahman7/next-blog-app",
-    previewUrl: "/https://nextjsblog-app.vercel.app/",
+    girUrl: "https://github.com/ubaidurrahman7/next-blog-app",
+    previewUrl: "https://nextjsblog-app.vercel.app/",
+  },
+  {
+    id: 8,
+    title: "Stay Healthy",
+    description:
+      "A web application for managing doctor appointments and health records. Built with React.js for the frontend and MongoDB for the database backend.",
+    image: "/images/projects/do_app.png",
+    tag: ["All", "Web"],
+    girUrl: "https://github.com/ubaidurrahman7/doctor_appointment_app",
+    previewUrl: "",
   },
 ];
 
@@ -85,6 +98,7 @@ export default function ProjectSection() {
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
+
   return (
     <div>
       <motion.h2
@@ -104,17 +118,17 @@ export default function ProjectSection() {
         className="text-white flex flex-row justify-center items-center gap-2 py-6 pb-10"
       >
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("All")}
           name="All"
           isSelected={tag === "All"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("Web")}
           name="Web"
           isSelected={tag === "Web"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("Mobile")}
           name="Mobile"
           isSelected={tag === "Mobile"}
         />

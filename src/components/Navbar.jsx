@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
 
 const navLinks = [
   {
@@ -30,7 +31,8 @@ export default function Navbar() {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          UbaidDev
+          <Image src="/images/header-logo.png" width={80} height={30} />
+          {/* Ubai dev */}
         </Link>
         <div className="mobile-menu block md:hidden">
           <button

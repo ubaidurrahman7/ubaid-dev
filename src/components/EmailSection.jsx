@@ -26,7 +26,7 @@ export default function EmailSection() {
       setShowCheck(true);
       setTimeout(() => {
         setShowCheck(false);
-      }, 1900); // Hides check icon after 1.5 seconds
+      }, 1900);
     } catch (error) {
       console.log("Error sending message:", error);
     }
@@ -95,7 +95,7 @@ export default function EmailSection() {
             <div className="flex flex-col gap-1">
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="Enter Your Email"
                 name="email"
                 className="input"
                 {...register("email", { required: true })}

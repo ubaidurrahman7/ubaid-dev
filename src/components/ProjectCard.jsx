@@ -1,5 +1,6 @@
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function ProjectCard({
   imgUrl,
@@ -8,6 +9,14 @@ export default function ProjectCard({
   gitUrl,
   previewUrl,
 }) {
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
+
+  const truncatedDescription = description.slice(0, 30);
+
   return (
     <div className="rounded-xl overflow-hidden shadow-sm shadow-slate-800 hover:shadow-md hover:shadow-white">
       <div
@@ -63,7 +72,17 @@ export default function ProjectCard({
 
       <div className="text-white rounded-b-xl bg-[#181818] py-6 px-4">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ABDB7BE]">{description}</p>
+        <p className="text-[#ABDB7BE]">
+          {showFullDescription ? description : truncatedDescription}
+          {description.length > 100 && (
+            <span
+              className="text-blue-500 cursor-pointer"
+              onClick={toggleDescription}
+            >
+              {showFullDescription ? " Show less" : " ...see more"}
+            </span>
+          )}
+        </p>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function HeroSection() {
   const handleDownloadCVClick = () => {
     const link = document.createElement("a");
-    link.href = "/images/projects/UbaidResume.pdf";
+    link.href = "/images/projects/Ubaid_Resume.pdf";
     link.download = "Ubaid_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -56,13 +56,13 @@ export default function HeroSection() {
           <div>
             <Link
               href="/contact"
-              className="px-6 w-full sm:w-fit py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500  hover:bg-slate-200 text-white"
+              className="px-6 w-full  sm:w-fit py-3 rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500  hover:bg-slate-200 text-white"
             >
               Hire me
             </Link>
             <button
               onClick={handleDownloadCVClick}
-              className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500  hover:bg-slate-800 text-white mt-3"
+              className="px-1 py-1 w-full  mt-5  sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500  hover:bg-slate-800 text-white md:mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
