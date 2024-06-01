@@ -47,3 +47,15 @@ body {
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #1f1f1f;
+}

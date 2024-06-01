@@ -102,13 +102,22 @@ export default function ProjectSection() {
   return (
     <div>
       <motion.h2
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit="hidden"
+        className="text-[#9A9A9A] text-[16px] text-center mb-2"
+      >
+        My Works
+      </motion.h2>
+      <motion.h2
         variants={fadeIn("down", 0.2)}
         initial="hidden"
         animate="show"
         exit="hidden"
         className="text-center text-4xl font-bold text-white mt-4 mb-6 "
       >
-        My Projects
+        Explore My Popular <span className="text-[#A357F7]">Projects</span>
       </motion.h2>
       <motion.div
         variants={fadeIn("down", 0.3)}

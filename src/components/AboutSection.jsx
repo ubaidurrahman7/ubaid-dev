@@ -1,28 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TabButton from "./TabButton";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
+import SkillsSection from "./SkillsSection";
+import ProjectSection from "./ProjectSection";
 
 const TAB_DATA = [
-  {
-    id: "skills",
-    title: "Skills",
-    content: (
-      <ul className="grid grid-cols-3 gap-y-1 list-disc pl-2">
-        <li>Node.js</li>
-        <li>JavaScript</li>
-        <li>React.js</li>
-        <li>Next.js</li>
-        <li>Epress</li>
-        <li>PostgresSQL</li>
-        <li>TypeScript</li>
-        <li>MongoDB</li>
-        <li>Tailwind CSS</li>
-      </ul>
-    ),
-  },
   {
     id: "education",
     title: "Education",
@@ -49,7 +34,14 @@ const TAB_DATA = [
 ];
 
 export default function AboutSection() {
-  const [activeTab, setActiveTab] = useState("skills");
+  const [activeTab, setActiveTab] = useState("education");
+  const [isAboutPage, setIsAboutPage] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsAboutPage(window.location.pathname === "/about");
+    }
+  }, []);
 
   const handleChangeTab = (tabId) => {
     setActiveTab(tabId);
@@ -92,7 +84,6 @@ export default function AboutSection() {
             life.
           </p>
 
-          {/* Tab Buttons */}
           <motion.div
             variants={fadeIn("right", 0.3)}
             initial="hidden"
@@ -111,7 +102,6 @@ export default function AboutSection() {
             ))}
           </motion.div>
 
-          {/* Tab Content */}
           <motion.div
             variants={fadeIn("right", 0.4)}
             initial="hidden"
@@ -123,6 +113,10 @@ export default function AboutSection() {
           </motion.div>
         </motion.div>
       </div>
+
+      <SkillsSection />
+
+      {isAboutPage && <ProjectSection />}
     </section>
   );
 }
